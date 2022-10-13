@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Router, navigate } from "@reach/router";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import Navigation from "./components/Navigation";
 import Login from "./components/Login";
@@ -14,21 +14,21 @@ function App() {
   // const [loading, setLoading] = useState(true);
 
   const logOutCallback = async () => {
-    await fetch("http://localhost:4000/logout", {
+    await fetch("http://localhost:8080/logout", {
       method: "POST",
       credentials: "include", // Needed to include the cookie
     });
     // Clear user from context
     setUser({});
     // Navigate back to startpage
-    navigate("/");
+    Navigate("/");
   };
 
   // First thing, check if a refreshtoken exist
   useEffect(() => {
     async function checkRefreshToken() {
       const result = await (
-        await fetch("http://localhost:4000/refresh_token", {
+        await fetch("http://localhost:8080/refresh_token", {
           method: "POST",
           credentials: "include", // Needed to include the cookie
           headers: {
@@ -50,15 +50,18 @@ function App() {
     <UserContext.Provider value={[user, setUser]}>
       <div className="app">
         <Navigation logOutCallback={logOutCallback} />
-        <Router id="router">
+        <Routes id="router">
           <Login path="login" />
           <Register path="register" />
           <Protected path="protected" />
           <Content path="/" />
-        </Router>
+        </Routes>
       </div>
     </UserContext.Provider>
   );
 }
 
 export default App;
+
+// https://reactrouter.com/en/main/upgrading/reach
+// guide to change from reach/router to react router

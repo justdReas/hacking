@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { navigate } from "@reach/router";
+import { Navigate } from "react-router-dom";
 import { UserContext } from "../App";
 
 const Login = () => {
@@ -23,14 +23,14 @@ const Login = () => {
       })
     ).json();
 
-    /* if (result.accesstoken) {
+    if (result.accesstoken) {
       setUser({
-        accesstoken: result.accesstoken,
+        // accesstoken: result.accesstoken,
       });
-      navigate("/");
+      Navigate("/");
     } else {
       console.log(result.error);
-    } */
+    }
   };
 
   useEffect(() => {

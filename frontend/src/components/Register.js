@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { navigate } from "@reach/router";
+import { Navigate } from "react-router-dom";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ const Register = () => {
     ).json();
     if (!result.error) {
       console.log(result.message);
-      navigate("/");
+      Navigate("/");
     } else {
       console.log(result.error);
     }
