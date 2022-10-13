@@ -5,7 +5,7 @@ const { verify } = require("jsonwebtoken");
 
 const { fakeDB } = require("./fakeDB");
 
-const app = express();
+const app = helmet(express());
 app.use(cookieParser());
 
 const PORT = process.env.PORT || 8080;
