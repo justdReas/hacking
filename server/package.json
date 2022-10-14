@@ -11,9 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.2",
-    "cors": "^2.8.5",
-    "express": "^3.0.0",
-    "jsonwebtoken": "^8.5.1"
+    "express": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
