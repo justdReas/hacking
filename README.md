@@ -1,6 +1,6 @@
 # Fixing your servers security issues
 
-## Login it Snyk
+## Login to Snyk
 For this project we want to use [Snyk](https://app.snyk.io/login?cta=login&loc=nav&page=homepage) to find and help fix all potential vulnerabilites in our code.
 
 Make sure your [GitHub](https://github.com/) is connected with Snyk so that you can create a project that [Snyk](https://app.snyk.io/login?cta=login&loc=nav&page=homepage) can scan for vulnerabilities. 
