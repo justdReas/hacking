@@ -4,7 +4,7 @@ const cookieParser = require("cookie-parser");
 const app = express();
 app.use(cookieParser());
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
 
 app.get("/", (req, res) => {
   res.status(200).send("You did it!");
