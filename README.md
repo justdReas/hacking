@@ -110,4 +110,6 @@ Keep-Alive: timeout=5
 ```
 ´X-Powered-By: Express` is now gone from the list making it a little harder for a potential attacker.
 
-THelmet is also customizable. For more information on this go to [Helmets GitHub page](https://helmetjs.github.io/).
+Once done, push the changes to your repository and see the vulnerabilites disappear in [Snyk](https://app.snyk.io/login?cta=login&loc=nav&page=homepage).
+
+Helmet is also customizable. For more information on this go to [Helmets GitHub page](https://helmetjs.github.io/).
