@@ -108,7 +108,7 @@ Date: Thu, 20 Oct 2022 23:17:56 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 ```
-´X-Powered-By: Express` is now gone from the list making it a little harder for a potential attacker.
+`X-Powered-By: Express` is now gone from the list making it a little harder for a potential attacker.
 
 Once done, push the changes to your repository and see the vulnerabilites disappear in [Snyk](https://app.snyk.io/login?cta=login&loc=nav&page=homepage).
 
